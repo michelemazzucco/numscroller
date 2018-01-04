@@ -2,11 +2,9 @@
   "name": "numscroller",
   "version": "1.0.0",
   "description": "",
-  "main": "numscroller-1.0.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "main": "index.js",
   "scripts": {
+    "format": "prettier --write index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/michelemazzucco/numscroller/issues"
   },
-  "homepage": "https://github.com/michelemazzucco/numscroller#readme"
+  "homepage": "https://github.com/michelemazzucco/numscroller#readme",
+  "devDependencies": {
+    "prettier": "^1.9.2"
+  }
 }
