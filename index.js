@@ -11,7 +11,7 @@
     $(document).scrollzipInit();
     $(document).rollerInit();
   });
-  
+
   $(window).on("load scroll resize", function() {
     $(".numscroller").scrollzip({
       showFunction: function() {
@@ -20,13 +20,13 @@
       wholeVisible: false
     });
   });
-  
+
   $.fn.scrollzipInit = function() {
     $("body").prepend(
       "<div style='position:fixed;top:0px;left:0px;width:0;height:0;' id='scrollzipPoint'></div>"
     );
   };
-  
+
   $.fn.rollerInit = function() {
     var i = 0;
     $(".numscroller").each(function() {
@@ -35,7 +35,7 @@
       $(this).addClass("roller-title-number-" + i);
     });
   };
-  
+
   $.fn.scrollzip = function(options) {
     var settings = $.extend(
       {
@@ -84,7 +84,7 @@
       return this;
     });
   };
-  
+
   function numberRoller(slno) {
     var min = $(".roller-title-number-" + slno).attr("data-min");
     var max = $(".roller-title-number-" + slno).attr("data-max");
@@ -94,7 +94,7 @@
     var timeout = timediff * 1000 / numdiff;
     numberRoll(slno, min, max, increment, timeout);
   }
-  
+
   function numberRoll(slno, min, max, increment, timeout) {
     if (min <= max) {
       $(".roller-title-number-" + slno).html(min);
